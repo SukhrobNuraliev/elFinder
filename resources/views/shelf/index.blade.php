@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Main')
+@section('title', 'elFinder - Organize Files')
     
 
 @section('content')
@@ -13,7 +13,7 @@
             <div class="jumbotron panel shadow" style="padding: 1rem 1rem; margin-bottom:3rem">
                     
                 <div class="form-row">
-                    <form class="col-12 col-sm-7" method="POST" action="{{route('search')}}">
+                    <form class="col-12 col-sm-7" method="POST" action="{{route('search.post')}}">
                         @csrf
                         <div class="form-row ">
                             <div class="col align-middle">

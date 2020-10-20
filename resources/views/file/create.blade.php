@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Create a Folder')
+@section('title', 'Create a new File')
     
 @section('content')
 
@@ -26,7 +26,7 @@
 
             <div class="form-row text-center">
                 <div class="col-12 col-sm-12 col-md-6 mb-2">
-                    {{-- {{dd($folder->id)}} --}}
+                    {{-- {{dd($folder->id)}} --}} 
                     @isset($folder->id)
                     <input type="hidden" name="folder" value="{{$folder->id}}">
                     @endisset
@@ -48,11 +48,12 @@
             </div>
           </form>
 
-          @isset($folder->id)
+          {{-- {{dd($box)}} --}}
+          @isset($box->id)
              <a class="mt-2 float-right btn btn-danger btn-lg shadow rounded" href="{{route('folder.show', ['box' => $box->id, 'folder' => $folder->id])}}">Cancel</a>
           @endisset
 
-          @empty($folder->id)
+          @empty($box->id)
               <a class="mt-2 float-right btn btn-danger btn-lg shadow rounded" href="{{route('shelf.index')}}">Cancel</a>
           @endempty
 

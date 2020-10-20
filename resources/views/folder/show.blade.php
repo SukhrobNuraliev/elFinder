@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Inside Folder')
+@section('title', 'Inside the Folder')
     
 @section('content')
 

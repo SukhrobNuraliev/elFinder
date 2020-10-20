@@ -31,13 +31,10 @@ Route::get('/boxes/{box}/folders/{folder}/files/{file}', [FileController::class,
 
 Route::get('/folders/create', [FolderController::class, 'create'])->name('folder.create');
 Route::post('/folders', [FolderController::class, 'newStore'])->name('newFolder.store');
-
+ 
 Route::get('/files/create', [FileController::class, 'create'])->name('newFile.create');
 Route::post('/files', [FileController::class, 'newStore'])->name('newFile.store');
 
 Route::get('/search', [FolderController::class, 'search'])->name('search');
-Route::post('/search', [FolderController::class, 'search'])->name('search');
+Route::post('/search', [FolderController::class, 'search'])->name('search.post');
 
-Route::post('/', [FolderController::class, 'search'])->name('search');
-
-Route::get('/box/folder/create', [FolderController::class, 'create'])->name('folder.create');

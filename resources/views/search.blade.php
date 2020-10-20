@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Main')
+@section('title', 'elFinder - Organize Files')
     
 
 @section('content')
@@ -13,7 +13,7 @@
             <div class="jumbotron panel" style="padding: 1rem 1rem;">
                     
                 <div class="form-row">
-                    <form class="col-12 col-sm-7" method="POST" action="{{route('search')}}">
+                    <form class="col-12 col-sm-7" method="POST" action="{{route('search.post')}}">
                         @csrf
                         <div class="form-row ">
                             <div class="col align-middle">
@@ -27,8 +27,8 @@
                     </form>
 
                     <div class="col-12 col-sm-5">
-                        <a class="btn btn-success btn-lg shadow rounded mt-1">New Folder</a>
-                        <a class="btn btn-success btn-lg shadow rounded mt-1">New File</a>
+                        <a href="{{route('folder.create')}}" class="btn btn-success btn-lg shadow rounded mt-1">New Folder</a>
+                        <a href="{{route('newFile.create')}}" class="btn btn-success btn-lg shadow rounded mt-1">New File</a>
                     </div>
                 </div>
 

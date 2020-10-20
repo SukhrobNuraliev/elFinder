@@ -50,7 +50,7 @@ class BoxController extends Controller
         // dd($box->id);
         return view('box.show', [
             'box' => $box,
-            'folders' => Folder::where('box_id', $box->id)->get(),
+            'folders' => Folder::where('box_id', $box->id)->latest()->get(),
         ]);
 
 

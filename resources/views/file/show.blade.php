@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Document')
+@section('title', 'File')
     
 @section('content')
 
